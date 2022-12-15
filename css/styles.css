@@ -1,0 +1,121 @@
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very_Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 15px;
+    font-family:'Poppins', sans-serif;
+    max-width: 40rem;
+    line-height: .8;
+    background-color: var(--Very_Light_Gray);
+    margin:0 auto;
+}
+/*Global*/
+h1{
+    font-weight: 200;
+}
+h2{
+    font-weight: 600;
+    font-size: 3rem;
+    color:var(--Very_Dark_Blue)
+}
+p{
+    color: var(--Grayish_Blue);
+    line-height: 1.5;
+}
+/*Text*/
+header p {
+    color:var(--Grayish_Blue);
+    text-align: center;
+}
+header{
+    padding:auto;
+    margin: 7%;
+}
+header h1,
+header h2{
+    text-align: center;
+}
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/*Panels*/
+.panel--cyan{
+    border-top: .5rem solid var(--Cyan);
+    color: var(--Very_Light_Gray);
+}
+.panel--red{
+    border-top: .5rem solid var(--Red);
+    background-color: var(--Very_Light_Gray);
+}
+.panel--orange{
+    border-top: .5rem solid var(--Orange);
+    color: var(--Very_Light_Gray);
+}
+.panel--blue{
+    border-top: .5rem solid var(--Blue);
+    color: var(--Very_Light_Gray);
+}
+/*Panel display*/
+.panel--blue,
+.panel--orange,
+.panel--cyan,
+.panel--red{
+    display: flex;
+    padding: auto;
+    align-items: center;
+    margin:7%;
+    border-radius: .5rem;
+}
+/*Shadow*/
+.panel--blue,
+.panel--orange,
+.panel--cyan,
+.panel--red{
+    -webkit-box-shadow: 7px 25px 32px -2px rgba(0,0,0,0.39);
+    -moz-box-shadow: 7px 25px 32px -2px rgba(0,0,0,0.39);
+    box-shadow: 7px 25px 32px -2px rgba(0,0,0,0.39);
+}
+
+/*Panel content*/
+.panel--cyan__text,
+.panel--blue__text,
+.panel--red__text,
+.panel--orange__text{
+    margin: 7%;
+    width: auto;
+    padding: auto;
+}
+img{
+    margin-top: 1rem;
+    margin-left: 75%;
+}
+@media(min-width:500px){
+    body{
+        max-width: 140rem;
+        max-height: 50rem;
+    }
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .panel--cyan,
+    .panel--red,
+    .panel--orange,
+    .panel--blue{
+        width: 100%;
+        margin: auto;
+    }
+}
